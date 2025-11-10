@@ -1,0 +1,24 @@
+TABby/
+├── src/
+│   ├── main.py               # Entry point
+│   ├── core/
+│   │   ├── audio_engine.py   # Handles playback, crossfades, volume
+│   │   ├── scene_manager.py  # Loads config, manages active scene
+│   │   └── config_loader.py  # Parses YAML into objects
+│   ├── ui/
+│   │   ├── cli.py            # Terminal/command interface
+│   │   └── gui.py            # Future: PySide6 GUI
+│   └── utils/
+│       └── logger.py
+├── assets/                   # Default sounds (optional)
+├── config/
+│   └── scenes.yaml           # Default config
+├── tests/
+│   ├── test_scene_loading.py
+│   └── test_crossfade.py
+├── README.md
+├── LICENSE (MIT)
+├── pyproject.toml / setup.cfg
+├── docs
+│   ├── DEVELOPMENT_PLAN.md
+│   └── architecture_plan.txt
