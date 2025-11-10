@@ -1,14 +1,8 @@
 scenes:
-  tavern:
-    description: "Cozy tavern ambience with crackling fire and chatter"
-    tracks:
-      - path: "assets/ambience/tavern_1.mp3"
-        volume: 0.8
-      - path: "assets/ambience/fire_loop.wav"
-        volume: 0.6
-
   forest:
     description: "Night forest with crickets and distant owl"
     tracks:
-      - path: "assets/ambience/crickets.wav"
-        volume: 0.9
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.7
+      - path: "assets/forest-ambience-296528.mp3"
+        volume: 0.5
