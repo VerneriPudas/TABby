@@ -3,6 +3,10 @@ scenes:
     description: "Night forest with crickets and distant owl"
     tracks:
       - path: "assets/adventures-loop-music-226836.mp3"
-        volume: 0.7
+        volume: 0.4
       - path: "assets/forest-ambience-296528.mp3"
-        volume: 0.5
+        volume: 0.2
+
+  empty:
+    description: "Silent scene with no sound"
+    tracks: []
