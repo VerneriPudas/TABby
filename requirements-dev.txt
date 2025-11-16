@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 PyYAML>=6.0
 pytest>=7.0
 pygame>=2.1
 pytest>=9.0.1
+=======
+PyYAML >=6.0
+pytest>=7.0
+pygame>=2.1
+>>>>>>> 4eab7832dc7e5301fe90c2399567fe6d79dda431

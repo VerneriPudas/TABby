@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
+<<<<<<< HEAD
 *.py[cod]
 *$py.class
 
@@ -64,3 +65,7 @@ Desktop.ini
 
 # Audio assets (optional, comment out if you want to track assets)
 # assets/
+=======
+*.py[codz]
+*$py.class
+>>>>>>> 4eab7832dc7e5301fe90c2399567fe6d79dda431
