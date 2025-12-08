@@ -42,12 +42,12 @@ Architecture plan — full architecture details live in architecture_plan.txt.
 > Goal: Implement all must-have features with command-line control.
 
 **Features**
-- [ ] Parse scenes from YAML config  
-- [ ] Load multiple tracks per scene  
+- [x] Parse scenes from YAML config  
+- [x] Load multiple tracks per scene  
 - [ ] Control individual track volume  
 - [ ] Loop playback for ambient sounds  
 - [ ] Crossfade between scenes (configurable duration)  
-- [ ] Command-line interface (`list`, `play <scene>`, `stop`, `quit`)  
+- [x] Command-line interface (`list`, `play <scene>`, `stop`, `quit`)  
 - [ ] Logging and error handling  
 - [ ] Test on Linux (Fedora) and Windows  
 

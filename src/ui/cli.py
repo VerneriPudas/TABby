@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 from src.core.scene_manager import SceneManager
-from src.core.audio_engine import AudioEngine, Track
+from src.core.audio_engine_pyo import AudioEngine, Track
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -14,7 +14,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--list", action="store_true", help="List available scenes")
     parser.add_argument("--activate", metavar="SCENE", help="Activate a named scene")
     parser.add_argument("--config", metavar="PATH", help="Path to scenes.yaml config file")
-    parser.add_argument("--main-volume", type=int, metavar="PERCENT", help="Set main volume (0-100)")
+    parser.add_argument("--master-volume", type=int, metavar="PERCENT", help="Set Master volume (0-100)")
     return parser
 
 def parse_args(argv=None):
@@ -41,7 +41,7 @@ def list_scenes(manager: SceneManager) -> None:
             else:
                 print(f"- {name}")
 
-def play_scene(manager: SceneManager, scene_name: str, main_volume: int | None = None) -> None:
+def play_scene(manager: SceneManager, scene_name: str, master_volume: int | None = None) -> None:
     try:
         tracks = manager.switch_scene(scene_name)
     except KeyError:
@@ -53,9 +53,9 @@ def play_scene(manager: SceneManager, scene_name: str, main_volume: int | None =
 
     try:
         engine = AudioEngine()
-        if main_volume is not None:
-            engine.set_main_volume(main_volume)
-            print(f"Set main volume to {main_volume}%")
+        if master_volume is not None:
+            engine.set_master_volume(master_volume)
+            print(f"Set Master volume to {master_volume}%")
         print(f"Activating scene '{scene_name}'...")
         if not tracks:
             print("(No tracks in this scene.)")
@@ -67,10 +67,10 @@ def play_scene(manager: SceneManager, scene_name: str, main_volume: int | None =
         sys.exit(4)
 
 def interactive_playback_loop(engine: AudioEngine, manager: SceneManager) -> None:
-    print("\nPlayback started. Type a number (0-100) to change main volume, 'list' to show tracks, 'change <scene>' to switch scene, or 'q' to quit.")
+    print("\nPlayback started. Type a number (0-100) to change Master volume, 'list' to show tracks, 'change <scene>' to switch scene, or 'q' to quit.")
     try:
         while True:
-            user_input = input("main volume (0-100), list, change <scene>, q=quit: ").strip()
+            user_input = input("Master volume (0-100), list, change <scene>, q=quit: ").strip()
             if user_input.lower() == 'q':
                 print("Stopping all sounds.")
                 engine.stop_all()
@@ -103,8 +103,8 @@ def interactive_playback_loop(engine: AudioEngine, manager: SceneManager) -> Non
                 try:
                     vol = int(user_input)
                     if 0 <= vol <= 100:
-                        engine.set_main_volume(vol)
-                        print(f"Main volume set to {vol}%.")
+                        engine.set_master_volume(float(vol / 100))
+                        print(f"Master volume set to {vol}%.")
                     else:
                         print("Please enter a value between 0 and 100.")
                 except ValueError:
@@ -122,7 +122,7 @@ def main(argv: list[str] | None = None) -> None:
     if ns.list:
         list_scenes(manager)
     if ns.activate:
-        play_scene(manager, ns.activate, ns.main_volume)
+        play_scene(manager, ns.activate, ns.master_volume)
 
 
 if __name__ == "__main__":

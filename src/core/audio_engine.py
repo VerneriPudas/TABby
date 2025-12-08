@@ -14,7 +14,6 @@ except ImportError:
     pygame = None
     mixer = None
 
-
 @dataclass
 class Track:
     """A single audio track to be played."""
@@ -39,7 +38,7 @@ class AudioEngine:
         self._channels: Dict[int, Track] = {}
         self.main_volume: float = 1.0
 
-    def set_main_volume(self, percent: int) -> None:
+    def set_master_volume(self, percent: int) -> None:
         """Set the main volume (0-100)."""
         v = max(0, min(100, percent)) / 100.0
         self.main_volume = v
@@ -47,7 +46,7 @@ class AudioEngine:
             if track.channel is not None:
                 track.channel.set_volume(track.volume * self.main_volume)
 
-    def play(self, track: Track) -> None:
+    def play(self, track: Track, fade_ms=0) -> None:
         """Load and play a single track (WAV/OGG/MP3)."""
         if not track.sound:
             track.sound = mixer.Sound(track.path)
