@@ -8,7 +8,9 @@ class GUI(QtWidgets.QWidget):
 
         # Create a list of scenes on the left
         menu_widget = QtWidgets.QListWidget()
-        scenes = scene_manager.SceneManager().list_scenes()
+        #scenes = scene_manager.SceneManager().list_scenes()
+        scenes = ["Scene 1", "Scene 2", "Scene 3"]  # Placeholder until SceneManager is implemented
+        print(f"Loaded scenes: {scenes}")
         for i, scene in enumerate(scenes):
             item = QtWidgets.QListWidgetItem(f"{scene} {i}")
             item.setTextAlignment(QtCore.Qt.AlignCenter)

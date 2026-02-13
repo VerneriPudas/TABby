@@ -4,7 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import List
 
-from .config_loader import Scene, load_scenes
+from src.tabby.core.config_loader import Scene, load_scenes
 
 
 @dataclass
