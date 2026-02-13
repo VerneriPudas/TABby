@@ -5,8 +5,8 @@ import argparse
 import sys
 from pathlib import Path
 
-from src.core.scene_manager import SceneManager
-from src.core.audio_engine_pyo import AudioEngine, Track
+from src.tabby.core.scene_manager import SceneManager
+from src.tabby.core.audio_engine_pyo import AudioEngine, Track
 
 
 def build_parser() -> argparse.ArgumentParser:
