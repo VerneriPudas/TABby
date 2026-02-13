@@ -25,5 +25,4 @@ TABby/
 ├── LICENSE (MIT)
 ├── pyproject.toml / setup.cfg
 ├── docs
-    ├── DEVELOPMENT_PLAN.md
     └── architecture_plan.txt
