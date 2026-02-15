@@ -103,3 +103,5 @@ scenes:
 - GUI updates position display at 100ms intervals for smooth UX
 
 See `docs/DEVELOPMENT_PLAN.md` for architecture and design decisions.
+
+![Skrunkli, the mascot of TABby](/assets/skrunkli.png)
