@@ -2,7 +2,8 @@
 
 This is a minimal stub
 """
-from tabby.ui.gui import start_gui
+
+from tabby.controller.controller import main
 
 if __name__ == "__main__":
-    start_gui()
+    main()

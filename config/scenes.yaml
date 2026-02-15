@@ -4,9 +4,69 @@ scenes:
     tracks:
       - path: "assets/adventures-loop-music-226836.mp3"
         volume: 0.4
+        name: "Adventurous music"
       - path: "assets/forest-ambience-296528.mp3"
         volume: 0.2
+        name: "Forest ambience"
 
   empty:
     description: "Silent scene with no sound"
     tracks: []
+  
+  None:
+
+  test scene:
+    description: "Scene with with really many tracks to test the UI"
+    tracks:
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        volume: 0.0
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      - path: "assets/adventures-loop-music-226836.mp3"
+        name: "Adventurous music"
+      

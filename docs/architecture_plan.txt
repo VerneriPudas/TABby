@@ -9,7 +9,7 @@ TABby/
 │       │   ├── core_interface.py   # Interfaces core functionality to controller 
 │       │   ├── audio_engine.py     # Handles playback
 │       │   ├── scene_manager.py    # Loads config, manages active scene
-│       │   └── config_loader.py    # Parses scene configs into objects
+│       │   └── config_loader.py    # Parses scene configs into objects <- functionality delegated to scene_manager. This module is obsolete
 │       ├── ui/
 │       │   ├── ui_interface.py     # Interfaces ui to controller
 │       │   ├── cli.py              # Terminal/command interface
