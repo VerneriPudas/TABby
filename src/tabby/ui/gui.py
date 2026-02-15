@@ -312,8 +312,20 @@ class GUI(QtWidgets.QWidget):
         
 def start_gui(scene_manager: SceneManager, audio_engine: AudioEngine) -> None:
     app = QtWidgets.QApplication()
+    
+    # Set application-level icon (for Windows taskbar and window)
+    icon_path = Path(__file__).resolve().parents[2] / "assets" / "skrunkli.png"
+    if icon_path.exists():
+        app_icon = QtGui.QIcon(str(icon_path))
+        app.setWindowIcon(app_icon)
+    
     w = GUI(scene_manager, audio_engine)
     w.resize(800, 600)
+    
+    # Also set on window
+    if icon_path.exists():
+        w.setWindowIcon(app_icon)
+    
     w.show()
 
     path = None # or "main_menu.qss" for testing
